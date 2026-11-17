@@ -131,8 +131,8 @@ app.use(logger('dev'))
 app.use(express.static(process.cwd() + '/client'))
 
 app.get('/', (req, res) => {
-    res.sendFile(process.cwd() + '/client/index.html')
-})
+    res.send('Servidor de Noctámbulo activo');
+});
 
 server.listen(port, () => {
     console.log(`Server running on port ${port}`)
