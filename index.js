@@ -4,12 +4,12 @@ import logger from 'morgan'
 import { Server } from 'socket.io'
 import { createServer } from 'node:http'
 
-const port = process.env.port || 3000
+const port = process.env.PORT || 3000
 
 const app = express()
 const server = createServer(app)
 const io = new Server(server, {
-connectionStateRecovery: {} 
+connectionStateRecovery: {},
    cors: {
         origin: "*" // Permite que la pagina blog se conecte
     }
