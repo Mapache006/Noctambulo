@@ -9,7 +9,7 @@ const port = process.env.port || 3000
 const app = express()
 const server = createServer(app)
 const io = new Server(server, {
-    //connectionStateRecovery: {} 
+connectionStateRecovery: {} 
    cors: {
         origin: "*" // Permite que la pagina blog se conecte
     }
